@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .header{
+    background: #0e1d34;
+
+    }
+    .h2{
+        color: white;
+    }
+   
+    .gallery {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .gallery-item .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        color: white;
+        padding: 20px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .overlay {
+        transform: translateY(0);
+    }
+
+    .overlay h3 {
+        margin-bottom: 5px;
+        font-size: 1.2em;
+    }
+
+    .overlay p {
+        font-size: 0.9em;
+        opacity: 0.9;
+    }
+    .margin{
+        margin-top: 10%;
+    }
+
+    @media (max-width: 768px) {
+        .gallery {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    }
+</style>
+
+<body>
+    <div class="container margin">
+
+    <div class="text-center">
+        <h1>Our Gallery</h1>
+        <p>Explore our collection of beautiful moments</p>
+    </div>
+
+    <div class="gallery">
+        {% load static %} 
+
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing1.jpeg' %}" alt="Gallery Image 1"/>
+            <div class="overlay">
+                <h2><b style="color: white;">Mission Save Lives campaign launched.</b></h2>
+                <p>
+                    Mission Save Lives Road Safety Campaign 2024 launched by Kashmir Road Safety Foundation and SSP Traffic.
+                </p>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing2.jpeg' %}" alt="Gallery Image 2">
+            <div class="overlay">
+                <h3>Mountain Vista</h3>
+                <p>A breathtaking view of nature</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing3.jpeg' %}" alt="Gallery Image 3">
+            <div class="overlay">
+                <h3>Ocean Waves</h3>
+                <p>The power of the sea</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing4.jpeg' %}" alt="Gallery Image 4">
+            <div class="overlay">
+                <h3>Forest Path</h3>
+                <p>A journey through nature</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing5.jpeg' %}" alt="Gallery Image 5">
+            <div class="overlay">
+                <h2><b style="color: white;">Road safety awareness event organized.</b></h2>
+                <p>SSP Traffic City Srinagar and Kashmir Road Safety Foundation organized a road safety awareness event.
+                </p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing6.jpeg' %}" alt="Gallery Image 6">
+            <div class="overlay">
+                <h2><b style="color: white;">Team @krsftrust with DySP </b></h2>
+                <p>Team @krsftrust with DySP Traffic City Srinagar Mr. Mehboob
+                </p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing8.jpeg' %}" alt="Gallery Image 8">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing9.jpeg' %}" alt="Gallery Image 9">
+            <div class="overlay">
+                <h2><b style="color: white;">Members of Kashmir Road Safety</b></h2>
+                <p>Foundation and Time Code Events held a high-level meeting with J&K Lt. Governor Manoj Sinha.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing10.jpeg' %}" alt="Gallery Image 10">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing11.jpeg' %}" alt="Gallery Image 11">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing12.jpeg' %}" alt="Gallery Image 12">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing13.jpeg' %}" alt="Gallery Image 13">
+            <div class="overlay">
+                <h2><b style="color: white;">With ARTO Flying Squad Kashmir</b></h2>
+                <p>Mr. Mubashir Jan and team Kashmir Road Safety Foundation.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing14.jpeg' %}" alt="Gallery Image 14">
+            <div class="overlay">
+                <h3 style="color: red;">Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing15.jpeg' %}" alt="Gallery Image 15">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing16.jpeg' %}" alt="Gallery Image 16">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing17.jpeg' %}" alt="Gallery Image 17">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing18.jpeg' %}" alt="Gallery Image 18">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing19.jpeg' %}" alt="Gallery Image 19">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing20.jpeg' %}" alt="Gallery Image 20">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>  <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing21.jpeg' %}" alt="Gallery Image 21">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing22.jpeg' %}" alt="Gallery Image 22">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing23.jpeg' %}" alt="Gallery Image 23">
+            <div class="overlay">
+                <h2><b style="color: white;">Kashmir Road Safety</b></h2>
+                <p>Foundation Completed 120 On Road Awareness Activities in 2024 so far.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing24.jpeg' %}" alt="Gallery Image 24">
+            <div class="overlay">
+                <h2><b style="color: white;">Helmet Heroes</b></h2>
+                <p>Campaign Launched by Kashmir Road Safety Foundation in Collaboration with SSP Traffic Police City Srinagar</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/img/gallery/amazing3.jpeg' %}" alt="Gallery Image 3">
+            <div class="overlay">
+                <h3>Beautiful Sunset</h3>
+                <p>Captured at the perfect moment</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}
