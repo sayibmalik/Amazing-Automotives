@@ -15,3 +15,9 @@ def services(request):
 def team(request):
     return render(request, 'team.html')
 
+def gallery(request):
+    return render(request, 'gallery.html')
+
+def testmonial(request):
+    return render(request, 'testmonial.html')
+
