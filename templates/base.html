@@ -32,21 +32,20 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+  <header id="header" class="header d-flex align-items-center fixed-top" 
+   >
+    <div 
+     class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="/" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="/static/assets/img/logo.png" alt=""> -->
-        <!-- <h1 class="sitename">Amazing Automotives</h1> -->
+    
         {% load static %} 
-        <img src="{% static 'assets/img/gallery/newlogo.svg' %}" alt="svg"/>  
-         <h1 class="sitename">Amazing Automotives</h1>         
+        <img src="{% static 'assets/img/gallery/logo.svg' %}" alt="svg"/>           
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="/" class="active">Home<br></a></li>
+          <li><a href="/" class="active" >Home<br></a></li>
           <li><a href="{% url 'services' %}">Services</a></li>
           <li><a href="{% url 'team' %}">Team</a></li>
           <li><a href="{% url 'gallery' %}">Gallery</a></li>
@@ -54,9 +53,8 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
       <a class="btn-getstarted" href="{% url 'about' %}">About Us</a>
-
+     
     </div>
   </header>
 
@@ -89,8 +87,8 @@
             <li><a href="/">Home</a></li>
             <li><a href="{% url 'about' %}">About us</a></li>
             <li><a href="{% url 'services' %}">Services</a></li>
-            <li><a href="{% url 'team' %}">Team</a></li>
-            <li><a href="{% url 'team' %}">Testmonial</a></li>
+            
+            
             <li><a href="{% url 'team' %}">Our Clients</a></li>
           </ul>
         </div>
