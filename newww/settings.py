@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-q87+cu3@w&8&*$3b78+)6#e@)g7booatm1($mwnh)owwe9p$re
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'a1f9-2405-201-5507-f827-8cbf-108b-2ecb-8c93.ngrok-free.app', '89.116.20.12']
+ALLOWED_HOSTS = ['127.0.0.1', 'a1f9-2405-201-5507-f827-8cbf-108b-2ecb-8c93.ngrok-free.app', '89.116.20.12''amazingautomotives.in']
 
 
 
